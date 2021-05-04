@@ -1,0 +1,57 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Dungeon Dudes Test Plan}
+\author{Jerimiah Katen}
+\date{January 2021}
+
+\begin{document}
+
+\maketitle
+
+\section{Summary}
+
+Dungeon Dudes is a light text based dungeon crawler game. The game has a player move through areas with random monsters in them. The player has to fight the monsters using dice based rolls to calculate whether or not an attack hits or misses. Once the player has defeated a monster, said monster has a chance to drop loot, which the player can choose to pick up. When all of the monsters a room are defeated the player can move to the next room. After an arbitrary number of rooms and monsters (minimum of 5 for both), the player will be declared victorious and the game will end.
+
+\section{Automated Test Cases}
+
+Automated tests may be executed with {\footnotesize python3 -m unittest -v}. This should be run from the top level directory.
+\\[.5cm]
+\textbf{Expected}: No errors or failures
+
+\section{Common Test Cases}
+
+
+\begin{enumerate}
+    \item Installation
+    
+    Prerequisites: Directory does not already exist
+
+    {\footnotesize git clone git@git.umbc.tc:tdqc/tdqc8/jkaten/dungeon_dudes.git; cd dungeon_dudes}
+    
+    \textbf{Expected}: directory is created
+
+    \item Correct Branch
+    
+    Prerequisites: In the project's directory
+    
+    {\footnotesize git branch}
+    
+    \textbf{Expected}: {\footnotesize main} is active
+    
+   \end{enumerate}
+
+\section{{\footnotesize Dungeon Dudes} Test Cases}
+
+\begin{enumerate}
+    \item Gameplay
+    
+    Prerequisites: In the projects directory
+    
+    {\footnotesize Play the game a bunch of times}
+    
+    \textbf{Expected}: Game works as intended
+    
+\end{enumerate}
+
+\end{document}

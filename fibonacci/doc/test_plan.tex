@@ -1,0 +1,41 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Fibonacci: Test Plan}
+\author{Jeremiah Katen: jereack@gmail.com \\ Ewen MacGregor: inodiomac@gmail.com}
+\date{April 2021}
+
+\begin{document}
+
+\maketitle
+
+\section{Summary}
+The Fibonacci project is an x86 Assembly Program written using Intel syntax. The purpose of the program is receive a positive integer '\textit{n}' as input and print the \textit{n\textsuperscript{th}} Fibonacci number in hexadecimal.
+
+\section{Testing}
+The test directory of 'Fibonacci' includes screenshots of edge cases, and functionality of the program.
+Edge cases include outside of the 0 - 300 input range.
+Functionality includes the Octal and Hexadecimal output.
+
+\section{Common Test Cases}
+
+\begin{enumerate}
+    \item Installation
+    
+    Prerequisites: Directory does not already exist
+
+    {\footnotesize git clone git@git.umbc.tc:tdqc/tdqc8/emacgregor/fibonacci.git; cd fibonacci}
+    
+    \textbf{Expected}: directory is created
+
+    \item Correct Branch
+    
+    Prerequisites: In the project's directory
+    
+    {\footnotesize git branch}
+    
+    \textbf{Expected}: {\footnotesize main} is active
+\end{enumerate}
+
+\end{document}
+

@@ -1,0 +1,29 @@
+ \documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Project Writeup: Fibonacci}
+\author{Ewen MacGregor: inodiomac@gmail.com}
+\date{April 2021}
+
+\begin{document}
+\maketitle
+
+\section{Project Summary}
+The Fibonacci project is an x86 Assembly Program written using Intel syntax. The purpose of the program is receive a positive integer '\textit{n}' as input and print the \textit{n\textsuperscript{th}} Fibonacci number in hexadecimal and octal.
+
+\section{Challenges}
+Figuring out how to pass the least significant bits for the octal output provided an interesting challenge, especially with regular print function calls. 
+\\\null\\
+Verifying the F(n) output was correct took longer than expected. The time required to notice logical errors for the large Fibonacci numbers in particular.
+
+\section{Successes}
+Organizing the functions/labels to chain together was straightforward.
+\\\null\\
+My partner is a genius.
+
+\section{Lessons Learned}
+Converting from a clean 64 bits to octal requires either bit shifting or linking the registers together.
+\\\null\\
+Coding in assembly is much more straightforward with marking out what registers get changed by certain function calls.
+
+\end{document}

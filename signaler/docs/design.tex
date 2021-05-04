@@ -1,0 +1,61 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Signaler Design-Plan}
+\author{jkaten}
+\date{April 2021}
+
+\begin{document}
+
+\maketitle
+
+\section{Project Summary}
+
+A program that prints out increasing prime numbers to standard output, approximately one every second.
+
+\section{Architecture}
+
+\subsection{Data}
+
+None.
+
+\subsection{Significant Functions}
+
+\textbf{void gen\_primes(void)}
+\\[.5cm]
+Creates threads for printing and generating prime numbers.
+\\[.5cm]
+\textbf{void reverse\_prime(int sig)}
+\\[.5cm]
+Thread function for reversing the order in which prime numbers are generated.
+\\[.5cm]
+\textbf{void skip\_prime(int sig)}
+Thread function for skipping the next prime in the sequence.
+\\[.5cm]
+\textbf{void restart\_prime(int sig)}
+Thread function for restarting the prime number.
+\\[.5cm]
+\textbf{void *print\_thread(void *n)}
+Thread function for sleeping the and printing prime number.
+\\[.5cm]
+\textbf{void *work\_thread(void *n)}
+Thread function to generate next prime number.
+\\[.5cm]
+\textbf{bool is\_prime(size\_t n)}
+Function that checks if a number is prime. Code borrowed from https://www.geeksforgeeks.org/program-to-find-the-next-prime-number.
+\\[.5cm]
+\textbf{size\_t next\_prime(size\_t N)}
+Function that gets the next prime number is sequence. Code borrowed from https://www.geeksforgeeks.org/program-to-find-the-next-prime-number.
+\\[.5cm]
+\textbf{int handle\_args(int argc, char **argv)}
+\\[.5cm]
+This function will handle command line arguments.
+\\[.5cm]
+\textbf{void print\_help(void)}
+This function prints the usage statement.
+
+\section{Plan}
+Get prime number generated in a way that works with the requirements. Work on handling the signals SIGHUP, SIGUSR1 and SIGUSR2. Then begine working on the bonus features.
+
+
+\end{document}

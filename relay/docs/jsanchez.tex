@@ -1,0 +1,26 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Relay Write-Up}
+\author{Jack Sanchez(jsanchez, jsanchez@gmail.com)}
+\date{22 April 2021}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+The purpose of this assignment was to make two programs, a dispatcher, and a listener. The dispatcher sends out messages that are received by all connected listeners. If a listener is run and there is no dispatcher it exits the program. If the dispatcher is running and the user gives a ctrl+d or a ctrl+c then the program will terminate as will any connected listeners.
+
+\section{Challenges}
+Working with sockets and threading was interesting to learn, it was a little difficult to understand exactly how to get the thread working correctly. The function calls were different than other built-in functions that we have used so it took a little time to understand how to work with them.
+Having the listeners connect with sockets was also a little bit of a challenge. Trying to understand how to create the sockets for the dispatcher so that the listener could connect and receive messages took a little bit of time to understand.
+
+\section{Successes}
+Once I was able to understand how the threads worked and how to use the thread functions, the implementation started to make more sense and became much easier to understand and work with.
+Sockets took a little bit of time to grasp but once I did it seemed relatively easy to get the listeners connected and receiving messages from the dispatcher.
+
+\section{Lessons Learned}
+Working with threads can be tough to work with but they seem like they can be very helpful in larger programs and putting in the time to learn how to better work with them could be very beneficial in the future. While this is a rather simple implementation of a client/server connection, this was very interesting thing to work with and I look forward to continue trying to do more with these concepts.
+
+\end{document}

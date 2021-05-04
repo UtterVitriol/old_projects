@@ -1,0 +1,41 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Design Plan: Fibonacci}
+\author{Jeremiah Katen: jereack@gmail.com \\ Ewen MacGregor: inodiomac@gmail.com}
+
+\date{April 2021}
+
+\begin{document}
+
+\maketitle
+
+\section{Project Summary}
+The Fibonacci project is an x86 Assembly Program written using Intel syntax. The purpose of the program is receive a positive integer '\textit{n}' as input and print the \textit{n\textsuperscript{th}} Fibonacci number in hexadecimal.
+
+\section{Significant Functions}
+Arguments - Validate '\textit{n}' and any feature options used. \newline
+\indent  (default range for '\textit{n}' is 0 - 100) \newline
+Main Loop - Iterates through Fibonacci numbers until '\textit{n}' is reached. \newline
+Next Fib - Calculates the next Fibonacci number. \newline
+Print - Prints the \textit{n\textsuperscript{th}} Fibonacci number. \newline
+\indent (One Label for each output variant?) \newline
+
+\section{Milestones}
+\begin{enumerate}
+    \item Calculate Fibonacci numbers
+    \item Print Successfully
+    \item Loop until '\textit{n}'
+    \item Features
+    \begin{enumerate}
+        \item -d: base 10 output
+        \item -o: base 8 output
+        \item Extend range to 0 - 300
+        \item Pull \textit{n} from standard input
+        \item LaTeX documentation
+        \item Man Page
+    \end{enumerate}
+\end{enumerate} 
+
+\end{document}
+

@@ -1,0 +1,92 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Signaler Test Plan}
+\author{Jerimiah Katen}
+\date{April 2021}
+
+\begin{document}
+
+\maketitle
+
+\section{Summary}
+
+A program that prints out increasing prime numbers to standard output, approximately one every second.
+
+\section{Automated Test Cases}
+\begin{enumerate}
+    \item Automated Tests
+    Automated tests may be executed with {\footnotesize make check}. This should be run from the top level directory.
+\end{enumerate}
+
+\\[.5cm]
+\textbf{Expected}: No errors, outputs as indicated.
+
+\section{Common Test Cases}
+
+
+\begin{enumerate}
+    \item Installation
+    
+    Prerequisites: Directory does not already exist
+
+    {\footnotesize git clone git@git.umbc.tc:tdqc/tdqc8/jkaten/signaler.git; cd signaler}
+    
+    \textbf{Expected}: directory is created
+
+    \item Correct Branch
+    
+    Prerequisites: In the project's directory
+    
+    {\footnotesize git branch}
+    
+    \textbf{Expected}: {\footnotesize main} is active
+    
+    \item Build Cleaning
+    
+    Prerequisites: In the project's directory
+    
+    {\footnotesize make; make clean; ls *.o; ls signaler}
+    
+    \textbf{Expected}: No such file or directory errors
+    
+    
+\end{enumerate}
+
+\section{{\footnotesize signaler} Test Cases}
+
+\begin{enumerate}
+    \item Build
+    
+    Prerequisites: In the projects directory; {\footnotesize make clean}
+    
+    {\footnotesize make; ls signaler}
+    
+    \textbf{Expected}: file is listed
+    
+    \item Build Debugging
+    
+    Prerequisites: In the projects directory; {\footnotesize make clean}
+    
+    {\footnotesize make debug; readelf --debug-dump=decodedline signaler}
+    
+    \textbf{Expected}: debugging info is listed
+    
+    \item Build Cleaning
+    
+    Prerequisites: In the project's directory
+    
+    {\footnotesize make; make clean; ls signaler}
+    
+    \textbf{Expected}: No such file or directory errors
+    
+    \item Profiling
+    
+    Prerequisites: In the project's directory
+    
+    {\footnotesize make profile; ./signaler -s 10 -r; ls gmon.out; make clean}
+    
+    \textbf{Expected}: gmon.out is listed
+\end{enumerate}
+
+\end{document}

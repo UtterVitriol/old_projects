@@ -1,0 +1,20 @@
+.TH dungeon_dudes 6 "February 2021" Linux "User Manuals"
+
+
+.SH NAME
+    dungeon_dudes.py
+
+.SH SYNOPSIS
+    ./dungeon_dudes.py [--dice]
+
+.SH OPTIONS
+--dice - shows dice rolls for combat phases
+
+.SH DESCRIPTION
+Dungeon Dudes is a light text based dungeon crawler game. The game has a player move through areas with random monsters in them. The player has to fight the monsters using dice based rolls to calculate whether or not an attack hits or misses. Once the player has defeated a monster, said monster has a chance to drop loot, which the player can choose to pick up. When all of the monsters a room are defeated the player can move to the next room. After an arbitrary number of rooms and monsters (minimum of 5 for both), the player will be declared victorious and the game will end.
+
+.SH AUTHOR
+    Jerimiah Katen
+
+.SH SEE ALSO
+    hangman, mastermind, bottles, guess, ws, zerg, battleship, polynomial, etc..

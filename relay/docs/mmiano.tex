@@ -1,0 +1,23 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Relay Project Writeup}
+\author{Michael Miano}
+\date{April 2021}
+
+\begin{document}
+
+\maketitle
+
+\section{Overview}
+The goal of this project was to make two programs that communicated text from one program to the other. The "Listener" would listen for information being sent from the dispatcher, and print the received text to stdout.
+
+\section{Lessons Learned}
+A lot of lessons were learned on this project. Sockets were the big topic of the project, and handling the different socket functions/calls were fun to work with. For example, the accept function was key to accepting the socket connections, while the close connection was key in destroying the connection. This was a great introduction to network programming.
+
+\section{Challenges}
+There were many challenges on this project. For example, the biggest issues stemmed from implementing termio for real-time communication. The documentation for termio was very convoluted, and a lot trial/error was needed to get it to work properly.
+
+
+
+\end{document}

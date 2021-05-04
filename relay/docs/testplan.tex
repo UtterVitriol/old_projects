@@ -1,0 +1,180 @@
+
+
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+
+\title{Relay Test Plan}
+
+\author{jkaten, jsanchez, mmiano}
+
+\date{April 2021}
+
+\begin{document}
+
+\maketitle
+
+\section{Summary}
+
+Testing procedures for the project relay.
+
+Relay is a project consisting of two programs; dispatcher and relay.
+
+The program dispatcher passively accepts text from standard input, exiting normally on EOF.
+
+The program listener will print out any text that was sent to a running instance of dispatcher. When dispatcher exits, so too does listener.
+
+\section{Automated Test Cases}
+
+\begin{enumerate}
+
+    \item Automated Tests
+
+    Automated tests may be executed with {\footnotesize make check}. This should be run from the top level directory.
+
+\end{enumerate}
+
+\\[.5cm]
+
+\textbf{Expected}: No errors, outputs as indicated.
+
+\section{Common Test Cases}
+
+\begin{enumerate}
+
+    \item Installation
+
+    
+
+    Prerequisites: Directory does not already exist
+
+    {\footnotesize git clone git@git.umbc.tc:tdqc/tdqc8/jkaten/relay.git; cd relay}
+
+    
+
+    \textbf{Expected}: directory is created
+
+    \item Correct Branch
+
+    
+
+    Prerequisites: In the project's directory
+
+    
+
+    {\footnotesize git branch}
+
+    
+
+    \textbf{Expected}: {\footnotesize main} is active
+
+    
+
+    \item Build Cleaning
+
+    
+
+    Prerequisites: In the project's directory
+
+    
+
+    {\footnotesize make; make clean; ls *.o; ls dispatcher; ls listener}
+
+    
+
+    \textbf{Expected}: No such file or directory errors
+
+    
+
+    
+
+\end{enumerate}
+
+\section{{\footnotesize relay} Test Cases}
+
+Prerequisites: In each programs directory; {\footnotesize export RELAY=23444}
+
+\begin{enumerate}
+
+    \item Build
+
+    
+
+    Prerequisites: In the projects directory; {\footnotesize make clean}
+
+    
+
+    {\footnotesize make; ls dispatcher; ls listener}
+
+    
+
+    \textbf{Expected}: file is listed
+
+    
+
+    \item Build Debugging
+
+    
+
+    Prerequisites: In the projects directory; {\footnotesize make clean}
+
+    
+
+    {\footnotesize make debug; readelf --debug-dump=decodedline dispatcher;  readelf --debug-dump=decodedline listener}
+
+    
+
+    \textbf{Expected}: debugging info is listed
+
+    
+
+    \item Build Cleaning
+
+    
+
+    Prerequisites: In the project's directory
+
+    
+
+    {\footnotesize make; make clean; ls dispatcher; ls listener}
+
+    
+
+    \textbf{Expected}: No such file or directory errors
+
+    
+
+    \item Profiling
+
+    
+
+    Prerequisites: In the project's directory
+
+    
+
+    {\footnotesize make profile; ./dispatcher ; ls gmon.out; make clean; rm gmon.out}
+
+    
+
+    \textbf{Enter}; ctrl+d
+
+    
+
+    \textbf{Expected}: gmon.out is listed
+
+    
+
+    {\footnotesize make profile; ./listener ; ls gmon.out; make clean; rm gmon.out}
+
+    
+
+    \textbf{Enter}; ctrl+d
+
+    
+
+    \textbf{Expected}: gmon.out is listed
+
+\end{enumerate}
+
+\end{document}
+

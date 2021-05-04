@@ -1,0 +1,57 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Bank of Nerds Test Plan}
+\author{Jerimiah Katen}
+\date{February 2021}
+
+\begin{document}
+
+\maketitle
+
+\section{Summary}
+
+Bank of Nerds is a basic banking system. The bank should include accounts, customers, transactions and a menu interface. Customers can have multiple accounts. The types of accounts a customer can have are; savings, checking, 401(k) and Money Market Fund.
+
+\section{Automated Test Cases}
+
+Automated tests may be executed with {\footnotesize python3 -m unittest -v}. This should be run from the top level directory.
+\\[.5cm]
+\textbf{Expected}: No errors or failures
+
+\section{Common Test Cases}
+
+
+\begin{enumerate}
+    \item Installation
+    
+    Prerequisites: Directory does not already exist
+
+    {\footnotesize git clone git@git.umbc.tc:tdqc/tdqc8/jkaten/bank\_of\_nerds.git; cd bank\_of\_nerds}
+    
+    \textbf{Expected}: directory is created
+
+    \item Correct Branch
+    
+    Prerequisites: In the project's directory
+    
+    {\footnotesize git branch}
+    
+    \textbf{Expected}: {\footnotesize main} is active
+    
+   \end{enumerate}
+
+\section{{\footnotesize Bank of Nerds} Test Cases}
+
+\begin{enumerate}
+    \item Functionality
+    
+    Prerequisites: In the projects directory
+    
+    {\footnotesize Run the program and use every feature.}
+    
+    \textbf{Expected}: Program works as intended
+    
+\end{enumerate}
+
+\end{document}

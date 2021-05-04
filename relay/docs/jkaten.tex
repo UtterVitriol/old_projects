@@ -1,0 +1,35 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{relay}
+\author{Jerimiah Katen}
+\date{April 2021}
+
+\begin{document}
+
+\maketitle
+
+\section{Project Summary}
+
+Write two programs, dispatcher and listener. The program dispatcher passively accepts text from standard input, exiting normally on EOF.The program listener will print out any text that was sent to a running instance of dispatcher. When dispatcher exits, so too does listener.
+
+
+\section{Challenges}
+
+Trying to figure out how to quickly check if a sock's connect as ended. I thought there would be an obvious what built into the socket libraries, but I came up short in my search
+\\[.5cm]
+Figuring out to handle EOF when working with termios in non-canonical mode was not so obvious. Again, I thought a quick google search would have me the answer, but that was not the case.
+
+
+\section{Successes}
+Because I had already played with sockets and threads before, this project wasn't overly difficult.
+\\[.5cm]
+I had more stuff to write in this project write-up.
+
+
+\section{Lessons Learned}
+The things we were taught applied to the project and made it fun.
+\\[.5cm]
+I learned a bit and /dev/tty and it's setting.
+
+\end{document}

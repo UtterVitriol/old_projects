@@ -1,0 +1,47 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Dungeon Dudes Design-Plan}
+\author{Katen, Jerimiah}
+\date{February 2021}
+
+\begin{document}
+
+\maketitle
+
+\section{Project Summary}
+
+Dungeon Dudes is a light text based dungeon crawler game. The game has a player move through areas with random monsters in them. The player has to fight the monsters using dice based rolls to calculate whether or not an attack hits or misses. Once the player has defeated a monster, said monster has a chance to drop loot, which the player can choose to pick up. When all of the monsters a room are defeated the player can move to the next room. After an arbitrary number of rooms and monsters (minimum of 5 for both), the player will be declared victorious and the game will end.
+
+\section{Architecture}
+
+\subsection{Data}
+
+Possible monster and save game data files.
+
+\subsection{Significant Functions/Classes}
+
+\textbf{Game engine class:}
+\\[.5cm]
+This class will handling loading/starting the game, moving the player from room to room and winning/losing the game. 
+\\[.5cm]
+\textbf{monster/player classes}
+\\[.5cm]
+These classes will handle the logic for attacking dying and the players inventory.
+\\[.5cm]
+\textbf{Loot class}
+\\[.5cm]
+This class will handling generating random loot for the player to acquire
+\\[.5cm]
+\textbf{Dice class}
+\\[.5cm]
+This class will handling rolling different dice for the game.
+\textbf{Level class}
+\\[.5cm]
+This class will handling generating a random level and populating it with monsters.
+
+\section{Plan}
+I will do a basic layout of the classes, get modules set up and organize the file structure a bit. Then I will begin with a start menu and loading the first level. Working from here, it should be fairly simple to implement an attack loop and moving to the next level. Once I'm done with the base requirements, I will start working on bonus features. Though I will probably start laying them out while I'm working on the base requirements.
+
+
+\end{document}
